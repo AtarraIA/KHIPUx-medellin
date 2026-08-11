@@ -1,0 +1,263 @@
+/* Khipux Medellín — hoja de estilos única, sin dependencias */
+
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f4f6f8;
+  --fg: #16202b;
+  --fg-muted: #5a6b7b;
+  --accent: #b4472c;
+  --accent-fg: #ffffff;
+  --border: #dde3e9;
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --max: 68rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #10151b;
+    --bg-alt: #161d25;
+    --fg: #e8edf2;
+    --fg-muted: #9fb0c0;
+    --accent: #e2795a;
+    --accent-fg: #10151b;
+    --border: #26313d;
+    --header-bg: rgba(16, 21, 27, 0.92);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem; /* deja espacio bajo el encabezado fijo */
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+a { color: var(--accent); }
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  color: var(--accent-fg);
+  border-radius: 6px;
+}
+
+/* ---------- Encabezado ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--header-bg);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-block: 0.75rem;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 0.25rem 0;
+  color: var(--fg-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  color: var(--fg);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Portada ---------- */
+
+.hero {
+  padding-block: clamp(3.5rem, 12vw, 7rem);
+  border-bottom: 1px solid var(--border);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 9vw, 4.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* ---------- Secciones ---------- */
+
+.section {
+  padding-block: clamp(2.75rem, 8vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.section.alt { background: var(--bg-alt); }
+
+h2 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: 0.75rem;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+p { max-width: 62ch; }
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--fg-muted);
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--fg-muted);
+}
+
+/* ---------- Tabla de programación ---------- */
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+}
+
+table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  font-size: 0.975rem;
+}
+
+caption {
+  text-align: left;
+  padding: 0.75rem 1rem 0;
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+thead th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+
+tbody tr:last-child td { border-bottom: 0; }
+
+td:first-child {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+/* ---------- Botón ---------- */
+
+.actions { margin-block: 1.75rem 0.75rem; }
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.btn:hover { filter: brightness(1.08); }
+
+/* ---------- Pie de página ---------- */
+
+.site-footer {
+  padding-block: 2.5rem 3rem;
+  color: var(--fg-muted);
+  font-size: 0.95rem;
+}
+
+.site-footer p { margin: 0.25rem 0; }
+
+.site-footer .small { font-size: 0.85rem; }
+
+/* ---------- Pantallas estrechas ---------- */
+
+@media (max-width: 30rem) {
+  .header-inner { justify-content: center; }
+  .nav { justify-content: center; gap: 0.25rem 1rem; }
+}
