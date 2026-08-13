@@ -1,0 +1,7 @@
+# Config local de Claude Code / vista previa
+.claude/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini

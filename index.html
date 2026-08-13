@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Khipux Medellín</title>
-<meta name="description" content="Khipux Medellín — Acerca de, programación e inscripción.">
+<title>KHIPUx Medellín</title>
+<meta name="description" content="KHIPUx Medellín — Bienestar, Educación e IA. Acerca de, programación e inscripción.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪢</text></svg>">
 </head>
@@ -14,7 +17,10 @@
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="#top">Khipux&nbsp;Medellín</a>
+    <a class="brand" href="#top" aria-label="KHIPUx Medellín — inicio">
+      <img class="brand-logo" src="assets/LogoKHIPUMedellin.svg" alt="KHIPUx Medellín" width="56" height="56">
+      <span class="brand-name">KHIPUx&nbsp;Medellín</span>
+    </a>
     <nav aria-label="Navegación principal">
       <ul class="nav">
         <li><a href="#acerca-de">Acerca de</a></li>
@@ -28,8 +34,13 @@
 <main id="top">
 
   <section class="hero">
-    <div class="wrap">
-      <h1>Khipux Medellín</h1>
+    <div class="hero-art" aria-hidden="true">
+      <img src="assets/BotanicalKHIPUmedellin.svg" alt="" loading="eager">
+    </div>
+    <div class="wrap hero-inner">
+      <h1 class="hero-title">KHIPUx Medellín</h1>
+      <p class="hero-subtitle">Bienestar, Educación e IA</p>
+      <span class="hero-divider" aria-hidden="true"></span>
     </div>
   </section>
 
@@ -37,35 +48,49 @@
     <div class="wrap">
       <h2>Acerca de</h2>
       <p class="lead">
-        <em>[Texto pendiente]</em> Breve descripción de Khipux Medellín: qué es,
+        <em>[Texto pendiente]</em> Breve descripción de KHIPUx Medellín: qué es,
         quién lo organiza y a quién está dirigido.
       </p>
       <p>
         <em>[Texto pendiente]</em> Espacio para ampliar los objetivos del encuentro,
         la comunidad que lo acompaña y el lugar donde se realiza.
       </p>
+      <div class="motifs" aria-hidden="true">
+        <img src="assets/DetallesCircularesKHIPU.svg" alt="" loading="lazy">
+      </div>
     </div>
   </section>
 
-  <section id="programacion" class="section alt">
+  <section id="programacion" class="section">
     <div class="wrap">
       <h2>Programación</h2>
       <p class="lead"><em>[Programación preliminar — sujeta a cambios]</em></p>
 
-      <div class="table-scroll">
-        <table>
-          <caption>Agenda del evento</caption>
-          <thead>
-            <tr><th scope="col">Hora</th><th scope="col">Actividad</th><th scope="col">Lugar</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>09:00</td><td><em>[Registro y bienvenida]</em></td><td><em>[Por definir]</em></td></tr>
-            <tr><td>10:00</td><td><em>[Charla de apertura]</em></td><td><em>[Por definir]</em></td></tr>
-            <tr><td>12:00</td><td><em>[Almuerzo]</em></td><td><em>[Por definir]</em></td></tr>
-            <tr><td>14:00</td><td><em>[Taller]</em></td><td><em>[Por definir]</em></td></tr>
-            <tr><td>17:00</td><td><em>[Cierre]</em></td><td><em>[Por definir]</em></td></tr>
-          </tbody>
-        </table>
+      <div class="panel panel--floral">
+        <div class="panel-art" aria-hidden="true">
+          <img src="assets/BotanicalKHIPUmedellin.svg" alt="" loading="lazy">
+        </div>
+        <div class="panel-body">
+          <div class="table-scroll">
+            <table>
+              <caption>Agenda del evento</caption>
+              <thead>
+                <tr><th scope="col">Hora</th><th scope="col">Actividad</th><th scope="col">Lugar</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>09:00</td><td><em>[Registro y bienvenida]</em></td><td><em>[Por definir]</em></td></tr>
+                <tr><td>10:00</td><td><em>[Charla de apertura]</em></td><td><em>[Por definir]</em></td></tr>
+                <tr><td>12:00</td><td><em>[Almuerzo]</em></td><td><em>[Por definir]</em></td></tr>
+                <tr><td>14:00</td><td><em>[Taller]</em></td><td><em>[Por definir]</em></td></tr>
+                <tr><td>17:00</td><td><em>[Cierre]</em></td><td><em>[Por definir]</em></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="motifs" aria-hidden="true">
+        <img src="assets/DetallesCircularesKHIPU.svg" alt="" loading="lazy">
       </div>
     </div>
   </section>
@@ -78,25 +103,34 @@
         y cierre, cupos disponibles y requisitos.
       </p>
       <p class="actions">
-        <a class="btn" href="mailto:atarraiaredesneuronales@gmail.com?subject=Inscripci%C3%B3n%20Khipux%20Medell%C3%ADn">
+        <a class="btn" href="mailto:atarraiaredesneuronales@gmail.com?subject=Inscripci%C3%B3n%20KHIPUx%20Medell%C3%ADn">
           Inscribirme
         </a>
       </p>
       <p class="note">
         <em>[Reemplazar por el enlace al formulario de inscripción cuando esté disponible.]</em>
       </p>
+      <div class="motifs" aria-hidden="true">
+        <img src="assets/DetallesCircularesKHIPU.svg" alt="" loading="lazy">
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <p>
-      Contacto:
-      <a href="mailto:atarraiaredesneuronales@gmail.com">atarraiaredesneuronales@gmail.com</a>
-    </p>
-    <p class="small">Khipux Medellín</p>
+  <div class="footer-band">
+    <div class="wrap">
+      <ul class="footer-logos">
+        <li><img src="assets/LogoKHIPU.svg" alt="KHIPU" loading="lazy"></li>
+        <li><img src="assets/LogoAtarraia.svg" alt="Atarraia — Redes Neuronales" loading="lazy"></li>
+        <li><img src="assets/LogoUniversidadNacional.svg" alt="Universidad Nacional de Colombia" loading="lazy"></li>
+      </ul>
+      <p class="footer-contact">
+        Contacto:
+        <a href="mailto:atarraiaredesneuronales@gmail.com">atarraiaredesneuronales@gmail.com</a>
+      </p>
+    </div>
   </div>
 </footer>
 
