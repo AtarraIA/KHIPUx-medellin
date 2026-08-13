@@ -169,14 +169,12 @@ a:focus-visible,
 .hero-art {
   position: absolute;
   top: -6%;
-  right: -8%;
-  width: min(56rem, 74%);
+  right: 3%;
+  width: min(50rem, 64%);
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 1;
   transform: rotate(15deg);
   transform-origin: top right;
-  -webkit-mask-image: linear-gradient(215deg, #000 72%, transparent 100%);
-          mask-image: linear-gradient(215deg, #000 72%, transparent 100%);
 }
 
 .hero-art img { width: 100%; height: auto; display: block; }
@@ -420,5 +418,5 @@ td:first-child {
   .header-inner { justify-content: center; }
   .brand-name { display: none; }
   .nav { justify-content: center; gap: 0.25rem 1.25rem; }
-  .hero-art { opacity: 0.28; width: 90%; }
+  .hero-art { width: 82%; }
 }
