@@ -403,7 +403,7 @@ td:first-child {
 .logo-khipu       { max-height: clamp(2.5rem, 4vw, 3.5rem); }
 .logo-atarraia    { max-height: clamp(4.25rem, 7.5vw, 6.25rem); }
 .logo-unal        { max-height: clamp(3.25rem, 5.5vw, 4.75rem); }
-.logo-consultoria { max-height: clamp(4rem, 7vw, 5.75rem); }
+.logo-consultoria { max-height: clamp(4.5rem, 8vw, 6.5rem); }
 
 /* En pantallas medianas/pequeñas, 2×2 (sigue simétrico) */
 @media (max-width: 60rem) {
