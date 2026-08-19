@@ -371,30 +371,47 @@ td:first-child {
   padding-block: clamp(3rem, 7vw, 5rem);
 }
 
+/* 4 logos en columnas iguales para una disposición simétrica */
 .footer-logos {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  justify-content: space-around;
-  gap: 2.5rem 3.5rem;
+  justify-items: center;
+  gap: 2.5rem 2rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.footer-logos li { flex: 0 1 auto; }
+.footer-logos li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
 .footer-logos img {
   display: block;
   width: auto;
+  height: auto;
+  max-width: 100%;
   filter: drop-shadow(0 1px 8px rgba(20, 30, 60, 0.3));
 }
 
-/* Alturas por logo para equilibrar sus proporciones (ATARRAIA es más alto,
-   así que necesita más altura para no verse pequeño ni recortado). */
-.logo-khipu    { height: clamp(2.75rem, 5vw, 4.25rem); }
-.logo-atarraia { height: clamp(5rem, 9.5vw, 8rem); }
-.logo-unal     { height: clamp(4rem, 7.5vw, 6.5rem); }
+/* Altura máxima por logo para equilibrar sus proporciones (aspectos distintos);
+   max-width evita que se desborden de su columna. */
+.logo-khipu       { max-height: clamp(2.5rem, 4vw, 3.5rem); }
+.logo-atarraia    { max-height: clamp(4.25rem, 7.5vw, 6.25rem); }
+.logo-unal        { max-height: clamp(3.25rem, 5.5vw, 4.75rem); }
+.logo-consultoria { max-height: clamp(4rem, 7vw, 5.75rem); }
+
+/* En pantallas medianas/pequeñas, 2×2 (sigue simétrico) */
+@media (max-width: 60rem) {
+  .footer-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+  }
+}
 
 .footer-contact {
   margin: 2.5rem auto 0;
